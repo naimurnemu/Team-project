@@ -8,20 +8,3 @@ const firebaseConfig = {
 };
 
 export default firebaseConfig;
-
-function generatorCourseList(subject) {
-    var courseObject = {
-        name: "course-name",
-        code: "course-id"
-    }
-    var courseList = []
-    
-    switch (subject) {
-        case "nodejs": 
-        let nodejs1 = courseObject;
-            nodejs1.name= "node"
-            nodejs1.code= "n101"
-        break;
-        default:
-    }
-}
