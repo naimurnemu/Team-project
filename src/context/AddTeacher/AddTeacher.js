@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import NavigationHeader from '../../pages/Shared/NavigationHeader/NavigationHeader';
 
 const AddTeacher = () => {
     const { register, handleSubmit,reset } = useForm();
@@ -14,7 +15,7 @@ const AddTeacher = () => {
     formData.append('link', data.link)
     formData.append('image', data.image[0])
 
-    console.log(data)
+    
     
 
     const url = 'http://localhost:5000/teachers'
@@ -35,26 +36,29 @@ const AddTeacher = () => {
 
     return (
         <div>
-         <h3 >Add Teachers</h3>
+          
+        <div className="text-center bg-secondary pb-5">
+        <h3 >You can add Teacher</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
-        <input  {...register("name")} required type="text" placeholder="Name" />
+        <input className="my-2 w-25"  {...register("name")} required type="text" placeholder="Name" />
         <br/>
-        <input  {...register("education")} required type="text" placeholder="Education" />
+        <input className="my-2 w-25"  {...register("education")} required type="text" placeholder="Education" />
         <br/>
-        <input  {...register("subject")} required type="text" placeholder="Subject" />
+        <input className="my-2 w-25"  {...register("subject")} required type="text" placeholder="Subject" />
         <br/>
-        <input  {...register("phone")} required type="text" placeholder="Phone" />
+        <input className="my-2 w-25"  {...register("phone")} required type="text" placeholder="Phone" />
         <br/>
-        <input  {...register("about")} required type="text" placeholder="About" />
+        <input  className="my-2 w-25" {...register("about")} required type="text" placeholder="About" />
         <br/>
-        <input  {...register("age")} required type="text" placeholder="Age" />
+        <input  className="my-2 w-25" {...register("age")} required type="text" placeholder="Age" />
         <br/>
-        <input  {...register("link")} required type="URL" placeholder="Your social media link" />
+        <input className="my-2 w-25"  {...register("link")} required type="URL" placeholder="Your social media link" />
         <br/>
-        <input  {...register("image")} accept="image/*"  type="file" />
+        <input className="my-2 w-25"  {...register("image")} accept="image/*"  type="file" />
         <br/>
-        <input  type="submit"  />
+        <input  className="my-2 w-25 bg-danger rounded-3" type="submit"  />
       </form>
+        </div>
        </div>
     );
 };
