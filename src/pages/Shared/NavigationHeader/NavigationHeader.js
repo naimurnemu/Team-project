@@ -1,10 +1,17 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import "./Navigationbar.css";
 
 const NavigationHeader = () => {
     return (
-        <Navbar className="p-2" fixed bg="light" variant="light" expand="lg">
+        <Navbar
+            className="p-3 nav-container fw-bold"
+            bg-dark
+            fixed
+            variant="dark"
+            expand="lg"
+        >
             <Container>
                 <Navbar.Brand>
                     <NavLink className="text-decoration-none " to="/home">
@@ -14,9 +21,9 @@ const NavigationHeader = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav
-                        variant="pills"
                         defaultActiveKey="/"
                         className="ms-auto"
+                        // menuVariant="dark"
                     >
                         <Nav.Link eventKey="home" as={Link} to="/">
                             Home

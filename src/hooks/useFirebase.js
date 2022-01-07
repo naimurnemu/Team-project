@@ -8,6 +8,8 @@ inintializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
+    const [isAdmin, setIsAdmin] = useState("");
 
     // Firebase auth
     const auth = getAuth();
@@ -15,12 +17,14 @@ const useFirebase = () => {
     // sign in with google
     const googleProvider = new GoogleAuthProvider();
     const googleSignIn = () => {
+        setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 setUser(result.user);
                 setError("");
             })
-            .catch((issue) => setError(issue.message));
+            .catch((issue) => setError(issue.message))
+            .finally(() => setIsLoading(false));
     };
 
     return {

@@ -13,13 +13,10 @@ import Login from "./pages/Registration/Login/Login";
 import NotFound from "./pages/Shared/NotFound/NotFound";
 import Teachers from "./pages/Teachers/Teachers/Teachers";
 
-
 function App() {
     return (
         <div className="App">
-
             <BrowserRouter>
-                
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="teachers" element={<Teachers />} />
@@ -33,7 +30,7 @@ function App() {
                             <Route path="updatePost" element={<UpdatePost />} />
                         </Route> */}
                     </Route>
-                    
+
                     <Route path="login" element={<Login />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
