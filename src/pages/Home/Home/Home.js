@@ -13,6 +13,7 @@ const Home = () => {
         <div>
             <NavigationHeader />
             <Banner></Banner>
+            
             <Controls></Controls>
             <Footer/>
             
