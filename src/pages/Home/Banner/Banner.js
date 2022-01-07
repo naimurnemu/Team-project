@@ -3,8 +3,8 @@ import "./Banner.css";
 
 const Banner = () => {
     return (
-        <div className="container-fluid">
-            <div className="row bannerBackground d-flex align-items-center justify-content-center">
+        <div className="container-fluid bannerBackground">
+            <div className="row d-flex align-items-center justify-content-center">
                 <div className="col-12 col-md-6">
                     <h3 className="pt-5">
                         Welcome to you, Our Study family!!!

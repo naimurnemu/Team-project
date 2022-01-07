@@ -4,6 +4,7 @@ import AddTeacher from "./context/AddTeacher/AddTeacher";
 import AddEvent from "./pages/Dashboard/AddEvent/AddEvent";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import MyPost from "./pages/Dashboard/MyPost/MyPost";
+import Payment from "./pages/Dashboard/Payment/Payment";
 import PendingPost from "./pages/Dashboard/PendingPost/PendingPost";
 import TeachersInfo from "./pages/Dashboard/TeachersInfo/TeachersInfo";
 import UpdatePost from "./pages/Dashboard/UpdatePost.js/UpdatePost";
@@ -24,11 +25,12 @@ function App() {
                     <Route path="Dashboard" element={<Dashboard />}>
                         <Route path="pendingPost" element={<PendingPost />} />
                         <Route path="addEvent" element={<AddEvent />} />
-                        <Route path={`addTeacher`} element={<AddTeacher />} />
+                        <Route path="addTeacher" element={<AddTeacher />} />
                         <Route path="teachersInfo" element={<TeachersInfo />} />
-                        {/* <Route path="myPosts" element={<MyPost />}>
-                            <Route path="updatePost" element={<UpdatePost />} />
-                        </Route> */}
+                        <Route path="myPosts" element={<MyPost />}></Route>
+                        <Route path="updatePost" element={<UpdatePost />} />
+                        <Route path="updatePost" element={<UpdatePost />} />
+                        <Route path="payment" element={<Payment />} />
                     </Route>
 
                     <Route path="login" element={<Login />}></Route>
