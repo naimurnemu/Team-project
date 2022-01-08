@@ -14,6 +14,7 @@ import Login from "./pages/Registration/Login/Login";
 import NotFound from "./pages/Shared/NotFound/NotFound";
 import Teachers from "./pages/Teachers/Teachers/Teachers";
 import "./App.css";
+import ManageEvents from "./pages/Dashboard/ManageEvents/ManageEvents";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                                 element={<PendingPost />}
                             />
                             <Route path="addEvent" element={<AddEvent />} />
+                            <Route path="manageEvent" element={<ManageEvents />} />
                             <Route path="addTeacher" element={<AddTeacher />} />
                             <Route
                                 path="manageTeacher"
