@@ -1,4 +1,8 @@
 import React from 'react';
+import Naime from '../../../Image/naime.png';
+import Saleh from '../../../Image/rsz_saleh1.jpg';
+import Minhaz from '../../../Image/rsz_minhaz.jpg';
+
 const About = () => {
     return (
         <div className="bg-dark">
@@ -23,19 +27,19 @@ const About = () => {
                
 
                 <div  className="col-sm-12 col-md-12 col-lg-4 py-5 px-5">
-                <img alt="" src="https://i.ibb.co/BnLDsD9/147263543-450862592856535-3621934526602806735-n.jpg"  className=" img-fluid h-100 rounded-3"/>                
+                <img alt="" src={Saleh}  className=" img-fluid h-100 rounded-3"/>                
                   <h2 className="text-light">Yea Saleh</h2>
                   <h5 className="text-white">President</h5>
                 </div>
 
                 <div  className="col-sm-12 col-md-12 col-lg-4 py-5 px-5">
-                <img alt="" src="https://aboutnaimur.netlify.app/static/media/protfolio_banner.392addb6.png"  className=" img-fluid h-100 rounded-3"/>                
+                <img alt="" src={Naime}  className=" img-fluid h-100 rounded-3"/>                
                   <h2 className="text-light">Naimur Rahman</h2>
                   <h5 className="text-white">Head Teacher</h5>
                 </div>
 
-                <div  className="col-sm-12 col-md-12 col-lg-4 mt-5 px-3">
-                <img alt="" src="https://scontent.fdac134-1.fna.fbcdn.net/v/t39.30808-6/223473066_956020461916476_2387706377006247570_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFhqiV_NfX-IMVrOEuBFjcYwAxe4yqjReHADF7jKqNF4Tt2X8GISUUa7I-drsMwC-M8lhoFszGRdrP6pa6gWG6r&_nc_ohc=Xz1EnCu3gg0AX9J0ccz&_nc_oc=AQnl7TWrmoVTxkfvp6pJdPV6WT16WYDmsEMkeVc_RWFHyTIPPZEY--Fzo9ldA1SnGYQ&_nc_ht=scontent.fdac134-1.fna&oh=00_AT_TORYqnHe2S_Ct4NUDOokL9Al72mg8pPHToRefmAZxrw&oe=61DD363A"  className=" img-fluid h-100  rounded-3 "/>                
+                <div  className="col-sm-12 col-md-12 col-lg-4 py-5 mt-5 px-3">
+                <img alt="" src={Minhaz}  className=" img-fluid h-100  rounded-3 "/>                
                   <h2 className="text-light"> Minhaz Moyna</h2> 
                   <h5 className="text-white">Assistant Head Teacher </h5>
                   
