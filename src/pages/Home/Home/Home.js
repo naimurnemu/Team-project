@@ -4,6 +4,7 @@ import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Contact from "../Contact/Contact";
 import Controls from "../Controls/Controls";
+import CulturalProgram from "../CulturalProgram/CulturalProgram";
 import Footer from "../Footer/Footer";
 
 
@@ -17,6 +18,7 @@ const Home = () => {
             <Banner></Banner>
             
             <Controls></Controls>
+            <CulturalProgram></CulturalProgram>
             <About></About>
             <Contact></Contact>
             <Footer/>
