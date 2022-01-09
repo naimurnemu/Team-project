@@ -97,7 +97,7 @@ const AddEvent = () => {
                 <div className="col-md-6">
                   <div className="text-center">
                   <img className="my-0 py-0" src="https://i.ibb.co/pzrffPp/event-removebg-preview.png" alt="" />
-                    <h5 className="d-flex justify-content-center my-0 py-0">Events</h5>
+                    <h5 className="d-flex justify-content-center my-0 py-0">Event</h5>
                   </div>
                 </div>
                 </div>

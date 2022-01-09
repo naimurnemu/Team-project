@@ -1,56 +1,90 @@
-import React from 'react';
-import Naime from '../../../Image/naime.png';
-import Saleh from '../../../Image/rsz_saleh1.jpg';
-import Minhaz from '../../../Image/rsz_minhaz.jpg';
+import React from "react";
+import Naim from "../../../Image/naime.png";
+import Saleh from "../../../Image/rsz_saleh1.jpg";
+import Minhaz from "../../../Image/rsz_minhaz.jpg";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const About = () => {
     return (
-        <div className="bg-dark">
-            
-           <div className="container">
-           <h2 className="Text-light"> About </h2>
+        <div className="my-4">
+            {/* <h2 className="text-info text-center bg-dark py-2">
+                KNOW ABOUT US
+            </h2> */}
 
-           <div className="row  mt-5">
-               <div className="col-sm-12 col-md-12 col-lg-6 text-light pe-5">
-                    <h5 className="text-info mb-5 mt-4 ">Welcome To secondary School.</h5>
-                    <h2 className="">Nature's Majesty <br/> Awaits You</h2>
-                    <p className="pb-5 pt-3 ">Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round trip.</p>
-                    <button className="rounded-pill  bg-warning px-5 py-2 mb-4 ">Learn More</button>
-               </div>
-                <div className="col-sm-12 col-md-12 col-lg-6">
-                <img alt="" src="https://www.voicesofyouth.org/sites/voy/files/images/2019-03/school.jpg"  className=" w-100 h-100 rounded-3 pb-5"/>
-               </div>
-           </div>
-            
-
-            <div className="row my-5 py-3">
-               
-
-                <div  className="col-sm-12 col-md-12 col-lg-4 py-5 px-5">
-                <img alt="" src={Saleh}  className=" img-fluid h-100 rounded-3"/>                
-                  <h2 className="text-light">Yea Saleh</h2>
-                  <h5 className="text-white">President</h5>
+            <div className="container-fluid">
+                <h2 className="text-danger">ABOUT</h2>
+                <div className="text-secondary container border-secondary border-start border-2 px-3">
+                    <p className="fs-5" style={{ textAlign: "justify" }}>
+                        We are committed to knowing each student personally,
+                        strengthening them socially and emotionally, and helping
+                        them become passionate young people who are connected to
+                        their faith, their school, and one another for life.{" "}
+                        <br />
+                        Divine Child High School students will grow in many
+                        waysthroughout their four years. A major part of this
+                        growth process is due to the opportunity to discover
+                        one’s values, skills and strengths in a co-ed setting,
+                        where all students can learn from one another.
+                        Collaborating together allows each gender to better
+                        understand and work with each other. It helps break down
+                        gender stereotypes and creates unity among our students.{" "}
+                        <br /> Our family atmosphere allows young men and women
+                        to learn together, pray together, celebrate together,
+                        compete together, and serve together. They can
+                        experience the joys of life and offer support to each
+                        other during their high school years and beyond. It’s
+                        why our students and graduates say:
+                        <br />
+                    </p>
+                    <p className="text-center fs-5 text-dark">
+                        "Once A Falcon, Always A Falcon"
+                    </p>
                 </div>
+            </div>
 
-                <div  className="col-sm-12 col-md-12 col-lg-4 py-5 px-5">
-                <img alt="" src={Naime}  className=" img-fluid h-100 rounded-3"/>                
-                  <h2 className="text-light">Naimur Rahman</h2>
-                  <h5 className="text-white">Head Teacher</h5>
-                </div>
+            <div className="container my-5 py-3">
+                <h3 className="Text-primary">Meet our Leadership Team</h3>
+                <div className="row">
+                    <div className="col-sm-12 col-md-4 col-lg-4 text-center p-4">
+                        <img
+                            alt=""
+                            src={Saleh}
+                            className=" img-fluid rounded-circle border-3 shadow-lg mx-3"
+                        />
+                        <h4 className="text-dark mt-2">Yea Saleh</h4>
+                        <h6 className="text-secondary">President</h6>
+                    </div>
 
-                <div  className="col-sm-12 col-md-12 col-lg-4 py-5 mt-5 px-3">
-                <img alt="" src={Minhaz}  className=" img-fluid h-100  rounded-3 "/>                
-                  <h2 className="text-light"> Minhaz Moyna</h2> 
-                  <h5 className="text-white">Assistant Head Teacher </h5>
-                  
+                    <div className="col-sm-12 col-md-4 col-lg-4 text-center p-4">
+                        <img
+                            alt=""
+                            src={Naim}
+                            className=" img-fluid rounded-circle border-3 shadow-lg mx-3"
+                        />
+                        <h4 className="text-dark mt-2">Naimur Rahman</h4>
+                        <h6 className="text-secondary">Head Teacher</h6>
+                    </div>
+
+                    <div className="col-sm-12 col-md-4 col-lg-4 text-center p-4">
+                        <img
+                            alt=""
+                            src={Minhaz}
+                            className=" img-fluid rounded-circle border-3 shadow-lg mx-3"
+                        />
+                        <h4 className="text-dark mt-2"> Minhaz Moyna</h4>
+                        <h6 className="text-secondary">
+                            Assistant Head Teacher
+                        </h6>
+                    </div>
                 </div>
-                
-            </div> 
-            <br/>
- 
-            </div>  
-            <br/>
-             <br/>   
+            </div>
+            <div className="text-center mb-5">
+                <Link to="teachers">
+                    <Button variant="info">Know All Teachers</Button>
+                </Link>
+            </div>
+            <br />
         </div>
     );
 };
