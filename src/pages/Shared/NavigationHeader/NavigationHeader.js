@@ -24,6 +24,9 @@ const NavigationHeader = () => {
                         <Nav.Link eventKey="events" as={Link} to="/events">
                             Events
                         </Nav.Link>
+                        <Nav.Link eventKey="getNewPost" as={Link} to="/getNewPost">
+                            posts
+                        </Nav.Link>
                         <Nav.Link eventKey="profile" as={Link} to="/Dashboard">
                             Dashboard
                         </Nav.Link>

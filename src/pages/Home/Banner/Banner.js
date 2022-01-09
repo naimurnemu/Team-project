@@ -5,21 +5,6 @@ import "./Banner.css";
 
 const Banner = () => {
     return (
-<<<<<<< HEAD
-        <div className="container-fluid bannerBackground">
-            <div className="row d-flex align-items-center justify-content-center">
-                <div className="col-12 col-md-6">
-                    <h3 className="pt-5 text-white">
-                        Welcome to you, Our Study family!!!
-                    </h3>
-                </div>
-                <div className="col-12 col-md-6">
-                    <img
-                        style={{ width: "100%" }}
-                        src="https://i.ibb.co/M25K6ns/online-1-removebg-preview.png"
-                        alt=""
-                    />
-=======
         <div className="margin-box">
             <div className="container-fluid bannerBackground">
                 <div className="py-5 blurbg">
@@ -54,7 +39,6 @@ const Banner = () => {
                             />
                         </div>
                     </div>
->>>>>>> 7ac272e52a9277b063698461d1b9ab61138efff2
                 </div>
             </div>
         </div>

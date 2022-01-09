@@ -15,6 +15,8 @@ import NotFound from "./pages/Shared/NotFound/NotFound";
 import Teachers from "./pages/Teachers/Teachers/Teachers";
 import "./App.css";
 import ManageEvents from "./pages/Dashboard/ManageEvents/ManageEvents";
+import Post from "./pages/Posts/Post/Post";
+import Posts from "./pages/Posts/Posts/Posts";
 
 function App() {
     return (
@@ -25,6 +27,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="teachers" element={<Teachers />} />
                         <Route path="events" element={<Events />} />
+                        <Route path="getNewPost" element={<Posts />} />
                         <Route path="Dashboard" element={<Dashboard />}>
                             <Route
                                 path="pendingPost"
@@ -33,6 +36,8 @@ function App() {
                             <Route path="addEvent" element={<AddEvent />} />
                             <Route path="manageEvent" element={<ManageEvents />} />
                             <Route path="addTeacher" element={<AddTeacher />} />
+                            
+                            <Route path="newPost" element={<Post />} />
                             <Route
                                 path="manageTeacher"
                                 element={<TeachersInfo />}

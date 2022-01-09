@@ -92,6 +92,16 @@ const Dashboard = () => {
                             </Link>
                            </h5>
                             <br />
+                           <h5>
+                           <i className="fab fa-cc-amazon-pay text-white me-2"></i>
+                            <Link
+                                to={`/dashboard/newPost`}
+                                className="text-decoration-none text-white fw-bold"
+                            >
+                               New Post
+                            </Link>
+                           </h5>
+                            <br />
                         </div>
 
                       <h5>  <i className="fas fa-sign-in-alt me-2 text-white"></i>

@@ -34,7 +34,7 @@ const Teachers = () => {
                     teachers.map(teacher =>
                         <div className="col-md-4 " key={teacher._id}  >
 
-                            <div className="m-1 p-3  d-flex rounded-top" style={{ height: "170px", backgroundColor: '#98F7CE' }} >
+                            <div className="m-1 p-3  d-flex rounded-top shadow-lg p-3 mb-5" style={{ height: "170px", backgroundColor: '#98F7CE' }} >
 
                                 <div>
 
