@@ -41,7 +41,7 @@ const NavigationHeader = () => {
 
                 <Navbar.Brand className="ms-auto">
                     <NavLink className="text-decoration-none text-light" to="/">
-                        <h4> High School</h4>
+                        <h2 className="m-0">Wisdom School</h2>
                     </NavLink>
                 </Navbar.Brand>
             </Container>

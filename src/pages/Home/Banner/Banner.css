@@ -1,8 +1,30 @@
+.margin-box {
+    background-color: rgb(44, 44, 89);
+}
+
 .bannerBackground {
-    background-image: url(https://images.unsplash.com/photo-1581078426770-6d336e5de7bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGVkdWNhdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60);
-    background-position:center;
+    background-image: url(https://media.istockphoto.com/photos/cute-boy-with-yellow-skateboard-picture-id1133562844?k=20&m=1133562844&s=612x612&w=0&h=U32gR_E_DqkCJb0vibIHvmvICPgF6sgGTMjfW35PztM=);
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 100%; */
-    /* height: 100%; */
+    margin-left: -20%;
+    
+}
+.blurbg{
+    background-color: rgba(56, 89, 73, 0.789);
+}
+.banner-title {
+    color: rgb(255, 255, 255);
+    filter: contrast(1) brightness(1.5);
+     
+}
+
+.img-box {
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-right: -45%;
+}
+.img-box img {
+    border-radius: 15px;
+    padding: 3rem;
 }
