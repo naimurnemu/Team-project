@@ -49,7 +49,7 @@ const Dashboard = () => {
 
                     <div className="my-3 mx-auto ">
                         <div>
-                            <h4>
+                            <h5>
                                 <i className="fas fa-shopping-cart text-white me-2"></i>
                                 <Link
                                     to={`/dashboard/addTeacher`}
@@ -57,37 +57,49 @@ const Dashboard = () => {
                                 >
                                     Add Teachers
                                 </Link>
-                            </h4>
+                            </h5>
 
                             <br />
 
-                            <h4>
+                            <h5>
                                 <i className="fas fa-comment text-white me-2"></i>
                                 <Link
-                                    to={`/dashboard/allPost`}
+                                    to={`/dashboard/manageTeacher`}
                                     className="text-decoration-none text-white fw-bold"
                                 >
-                                    Manage All Post
+                                    Manage Teacher
                                 </Link>
-                            </h4>
+                            </h5>
                             <br />
-                            <i className="fab fa-cc-amazon-pay text-white me-2"></i>
+                           <h5>
+                           <i className="fab fa-cc-amazon-pay text-white me-2"></i>
                             <Link
-                                to={`/dashboard/payment`}
+                                to={`/dashboard/addEvent`}
                                 className="text-decoration-none text-white fw-bold"
                             >
-                                Payment
+                                Add Event
                             </Link>
+                           </h5>
+                            <br />
+                           <h5>
+                           <i className="fab fa-cc-amazon-pay text-white me-2"></i>
+                            <Link
+                                to={`/dashboard/manageEvent`}
+                                className="text-decoration-none text-white fw-bold"
+                            >
+                                Manage Event
+                            </Link>
+                           </h5>
                             <br />
                         </div>
 
-                        <i className="fas fa-sign-in-alt me-2 text-white"></i>
+                      <h5>  <i className="fas fa-sign-in-alt me-2 text-white"></i>
                         <Link
                             to="/"
                             className="text-decoration-none text-white p-0 border-0 fw-bold"
                         >
                             Logout
-                        </Link>
+                        </Link></h5>
                     </div>
                 </ul>
             </nav>
