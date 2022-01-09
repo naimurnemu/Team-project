@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import "./Dashboard.css";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link, Outlet } from "react-router-dom";
 
+
 const Dashboard = () => {
     const [sidebar, setSidebar] = useState(false);
-
     const showSidebar = () => setSidebar(!sidebar);
+    
 
-    // const [admin,setAdmin]=useState(false)
+ 
 
     return (
         <div>

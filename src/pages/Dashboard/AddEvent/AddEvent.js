@@ -36,11 +36,15 @@ const AddEvent = () => {
 
 
     return (
-        <div>
+        <div className="p-0 container-fluid">
             <h2>this is add event</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="row  bg-secondary d-flex align-items-center m-0 p-0">
+            <div className="col-md-6">
+
+            
+            <form className="text-center" onSubmit={handleSubmit(onSubmit)}>
                     <input
-                        className="my-2 w-25"
+                        className="my-2 w-50 rounded-2 border-0 ps-2"
                         {...register("title")}
                         required
                         type="text"
@@ -48,7 +52,7 @@ const AddEvent = () => {
                     />
                     <br />
                     <input
-                        className="my-2 w-25"
+                        className="my-2 w-50 rounded-2 border-0 ps-2"
                         {...register("description")}
                         required
                         type="text"
@@ -56,7 +60,7 @@ const AddEvent = () => {
                     />
                     <br />
                     <input
-                        className="my-2 w-25"
+                        className="my-2 w-50 rounded-2 border-0 ps-2"
                         {...register("location")}
                         required
                         type="text"
@@ -65,7 +69,7 @@ const AddEvent = () => {
 
                     <br />
                     <input
-                        className="my-2 w-25"
+                        className="my-2 w-50 rounded-2 border-0 ps-2"
                         {...register("date")}
                         required
                         type="date"
@@ -77,17 +81,26 @@ const AddEvent = () => {
                    
                     <br />
                     <input
-                        className="my-2 w-25"
+                        className="my-2 w-50 rounded-2 border-0 "
                         {...register("image")}
                         accept="image/*"
                         type="file"
                     />
                     <br />
                     <input
-                        className="my-2 w-25 bg-danger rounded-3"
+                        className="my-2 w-50 bg-danger rounded-3"
                         type="submit"
                     />
                 </form>
+                </div>
+
+                <div className="col-md-6">
+                  <div className="text-center">
+                  <img className="my-0 py-0" src="https://i.ibb.co/pzrffPp/event-removebg-preview.png" alt="" />
+                    <h5 className="d-flex justify-content-center my-0 py-0">Events</h5>
+                  </div>
+                </div>
+                </div>
         </div>
     );
 };

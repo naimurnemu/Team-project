@@ -6,7 +6,7 @@ const Banner = () => {
         <div className="container-fluid bannerBackground">
             <div className="row d-flex align-items-center justify-content-center">
                 <div className="col-12 col-md-6">
-                    <h3 className="pt-5">
+                    <h3 className="pt-5 text-white">
                         Welcome to you, Our Study family!!!
                     </h3>
                 </div>
