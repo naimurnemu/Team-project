@@ -33,7 +33,7 @@ const Event = () => {
                       <Card.Text>
                         {post.subject}
                       </Card.Text>
-                      <Card.Link href="#">Card Link</Card.Link>
+                      <Card.Link href="#">Card Links</Card.Link>
                       <Card.Link href="#">Another Link</Card.Link>
                     </Card.Body>
                   </Card>)
