@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import "./Dashboard.css";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link, Outlet } from "react-router-dom";
 
+
 const Dashboard = () => {
     const [sidebar, setSidebar] = useState(false);
-
     const showSidebar = () => setSidebar(!sidebar);
+    
 
-    // const [admin,setAdmin]=useState(false)
+ 
 
     return (
         <div>
@@ -88,6 +89,16 @@ const Dashboard = () => {
                                 className="text-decoration-none text-white fw-bold"
                             >
                                 Manage Event
+                            </Link>
+                           </h5>
+                            <br />
+                           <h5>
+                           <i className="fab fa-cc-amazon-pay text-white me-2"></i>
+                            <Link
+                                to={`/dashboard/newPost`}
+                                className="text-decoration-none text-white fw-bold"
+                            >
+                               New Post
                             </Link>
                            </h5>
                             <br />

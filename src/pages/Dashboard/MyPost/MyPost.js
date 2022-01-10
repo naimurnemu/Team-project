@@ -1,7 +1,8 @@
-import React from "react";
 import NavigationHeader from "../../Shared/NavigationHeader/NavigationHeader";
 
 const MyPost = () => {
+
+  
     return (
         <div>
             <NavigationHeader />
