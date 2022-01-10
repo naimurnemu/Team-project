@@ -1,16 +1,15 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./Dashboard.css";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link, Outlet } from "react-router-dom";
-
+import { Button } from "react-bootstrap";
+import useAuth from "../../../hooks/useAuth";
 
 const Dashboard = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
-    
-
- 
+    const { user, logOut } = useAuth();
 
     return (
         <div>
@@ -19,22 +18,22 @@ const Dashboard = () => {
                     <FaIcons.FaBars onClick={showSidebar} />
                 </Link>
                 <div className="d-flex gap-3 me-5">
-                    <h6>
-                        <Link
-                            className="text-white text-decoration-none"
-                            to="/"
-                        >
-                            Home
-                        </Link>
-                    </h6>
-                    <h6>
-                        <Link
-                            to="/"
-                            className="text-white text-decoration-none"
-                        >
+                    <span className="text-light fs-5">
+                        <img
+                            className="img-fluid rounded-circle"
+                            title={user.email}
+                            width="50"
+                            height="50"
+                            src={user.photoURL}
+                            alt="User_info"
+                        />
+                    </span>
+                    <Link to="/" className="text-white text-decoration-none">
+                        <Button onClick={logOut}>
+                            <i className="fas fa-sign-out-alt" />
                             Logout
-                        </Link>
-                    </h6>
+                        </Button>
+                    </Link>
                 </div>
             </div>
             <nav
@@ -50,67 +49,96 @@ const Dashboard = () => {
 
                     <div className="my-3 mx-auto ">
                         <div>
-                            <h5>
-                                <i className="fas fa-shopping-cart text-white me-2"></i>
+                            <p>
                                 <Link
                                     to={`/dashboard/addTeacher`}
-                                    className="text-decoration-none text-white  fw-bold"
+                                    className="text-decoration-none mb-3 text-white  fw-bold"
                                 >
+                                    <i className="fas fa-plus-circle" /> &nbsp;
                                     Add Teachers
                                 </Link>
-                            </h5>
+                            </p>
 
-                            <br />
-
-                            <h5>
-                                <i className="fas fa-comment text-white me-2"></i>
+                            <p>
                                 <Link
                                     to={`/dashboard/manageTeacher`}
-                                    className="text-decoration-none text-white fw-bold"
+                                    className="text-decoration-none mb-3 text-white fw-bold"
                                 >
-                                    Manage Teacher
+                                    <i className="fas fa-tasks" />
+                                    &nbsp; Manage Teacher
                                 </Link>
-                            </h5>
-                            <br />
-                           <h5>
-                           <i className="fab fa-cc-amazon-pay text-white me-2"></i>
-                            <Link
-                                to={`/dashboard/addEvent`}
-                                className="text-decoration-none text-white fw-bold"
-                            >
-                                Add Event
-                            </Link>
-                           </h5>
-                            <br />
-                           <h5>
-                           <i className="fab fa-cc-amazon-pay text-white me-2"></i>
-                            <Link
-                                to={`/dashboard/manageEvent`}
-                                className="text-decoration-none text-white fw-bold"
-                            >
-                                Manage Event
-                            </Link>
-                           </h5>
-                            <br />
-                           <h5>
-                           <i className="fab fa-cc-amazon-pay text-white me-2"></i>
-                            <Link
-                                to={`/dashboard/newPost`}
-                                className="text-decoration-none text-white fw-bold"
-                            >
-                               New Post
-                            </Link>
-                           </h5>
-                            <br />
+                            </p>
+
+                            <p>
+                                <Link
+                                    to={`/dashboard/addEvent`}
+                                    className="text-decoration-none mb-3 text-white fw-bold"
+                                >
+                                    <i className="fas fa-plus-circle" />
+                                    &nbsp; Add Event
+                                </Link>
+                            </p>
+
+                            <p>
+                                <Link
+                                    to={`/dashboard/manageEvent`}
+                                    className="text-decoration-none mb-3 text-white fw-bold"
+                                >
+                                    <i className="fas fa-tasks" />
+                                    &nbsp; Manage Event
+                                </Link>
+                            </p>
+                            <p>
+                                <Link
+                                    to={`/dashboard/makeAdmin`}
+                                    className="text-decoration-none mb-3 text-white fw-bold"
+                                >
+                                    <i className="fas fa-plus-circle" />
+                                    &nbsp; Add New Admin
+                                </Link>
+                            </p>
+
+                            <p>
+                                <Link
+                                    to={`/dashboard`}
+                                    className="text-decoration-none mb-3 text-white fw-bold"
+                                >
+                                    <i className="fas fa-plus-circle" />
+                                    &nbsp; New Post
+                                </Link>
+                            </p>
+                            <p>
+                                <Link
+                                    to={`/dashboard/pendingPosts`}
+                                    className="text-decoration-none mb-3 text-white fw-bold"
+                                >
+                                    <i className="fas fa-plus-circle" />
+                                    &nbsp; Pending Posts
+                                </Link>
+                            </p>
                         </div>
 
-                      <h5>  <i className="fas fa-sign-in-alt me-2 text-white"></i>
                         <Link
                             to="/"
-                            className="text-decoration-none text-white p-0 border-0 fw-bold"
+                            className="text-white text-decoration-none"
                         >
-                            Logout
-                        </Link></h5>
+                            <Button
+                                className="d-block mb-3 w-75"
+                                variant="secondary"
+                            >
+                                <i className="fas fa-home" />
+                                Home
+                            </Button>
+                        </Link>
+                        <Link
+                            to="/"
+                            className="text-white text-decoration-none"
+                        >
+                            <Button className="d-block w-75" onClick={logOut}>
+                                <i className="fas fa-sign-out-alt" />
+                                Logout
+                            </Button>
+                        </Link>
                     </div>
                 </ul>
             </nav>

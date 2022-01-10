@@ -31,7 +31,7 @@ const Banner = () => {
                                 </Button>
                             </Link>
                         </div>
-                        <div className="col-12 col-md-6 p-2 img-box">
+                        <div className="col-12 col-md-6 img-box">
                             <img
                                 className="img-fluid"
                                 src="https://media.istockphoto.com/photos/teenage-boy-listening-to-music-while-doing-homework-picture-id1033164992?k=20&m=1033164992&s=612x612&w=0&h=LU3XrP73-ApUGsAj0hMCz_gSqG1WsjhYmySUj1nypXU="

@@ -1,9 +1,11 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import "./Navigationbar.css";
 
 const NavigationHeader = () => {
+    const { user, logOut } = useAuth();
     return (
         <Navbar
             className="py-4 nav-container fw-bold"
@@ -24,20 +26,36 @@ const NavigationHeader = () => {
                         <Nav.Link eventKey="events" as={Link} to="/events">
                             Events
                         </Nav.Link>
-                        <Nav.Link eventKey="getNewPost" as={Link} to="/getNewPost">
-                            posts
+                        <Nav.Link
+                            eventKey="getNewPost"
+                            as={Link}
+                            to="/magazine"
+                        >
+                            Magazine
                         </Nav.Link>
-                        <Nav.Link eventKey="profile" as={Link} to="/Dashboard">
+                        <Nav.Link eventKey="profile" as={Link} to="/dashboard">
                             Dashboard
                         </Nav.Link>
-                        <Nav.Link
-                            className="mb-2"
-                            eventKey="login"
-                            as={Link}
-                            to="/login"
-                        >
-                            Login
-                        </Nav.Link>
+                        {user?.email ? (
+                            <Link
+                                to="/"
+                                className="text-white text-decoration-none"
+                            >
+                                <Button onClick={logOut}>
+                                    <i className="fas fa-sign-out-alt" />
+                                    Logout
+                                </Button>
+                            </Link>
+                        ) : (
+                            <Nav.Link
+                                className="mb-2"
+                                eventKey="login"
+                                as={Link}
+                                to="/login"
+                            >
+                                Login
+                            </Nav.Link>
+                        )}
                     </Nav>
                 </Navbar.Collapse>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

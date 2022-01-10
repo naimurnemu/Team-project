@@ -1,35 +1,67 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from "react";
+import { Spinner } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import useAuth from "../../hooks/useAuth";
 
 const MakeAdmin = () => {
-    const { register, handleSubmit, reset} = useForm();
-    const onSubmit =(data) =>{
-        
-      
-
-    }
+    const [success, setSuccess] = useState(false);
+    const { register, handleSubmit, reset } = useForm();
+    const { isLoading } = useAuth();
+    const onSubmit = (data) => {
+        console.log(data)
+        fetch("http://localhost:5000/users/makeAdmin", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.modifiedCount) {
+                    setSuccess(true);
+                    reset();
+                }
+            });
+    };
     return (
-        <div className="bg-light text-center">
-             <h3 className="text-center py-3 ">Create Admin</h3>
-                <div className="pb-5">
-                   
-                  <form onSubmit={handleSubmit(onSubmit)}>
-                    <input
-                    className="w-25"
-                    name="email"
-                    placeholder="Email"
-                    type="email"
-                    {...register("email", { required: true })}
-                    />
+        <div>
+            {isLoading ? (
+                <div>
                     <br />
-
-                    <input
-                    className="submit-btn btn px-2 w-25 btn-danger mt-3"
-                    type="submit"
-                    value="Create Admin"
-                    />
-                </form>
+                    <br />
+                    <Spinner />
                 </div>
+            ) : (
+                <div className="bg-light text-center">
+                    <h3 className="text-center py-3 ">Make New Admin</h3>
+                    <div className="pb-5">
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input
+                                className="w-25 form-control mx-auto"
+                                name="email"
+                                placeholder="Enter email"
+                                type="email"
+                                {...register("email", { required: true })}
+                            />
+                            <br />
+
+                            <input
+                                className="submit-btn btn px-2 w-25 btn-danger mt-3"
+                                type="submit"
+                                value="Create Admin"
+                            />
+                        </form>
+                    </div>
+                </div>
+            )}
+            {success && (
+                <div className="text-center">
+                    <span className="bg-success text-light fw-5 my-2 mx-auto w-75 p-2">
+                        Event Added Successful
+                    </span>
+                </div>
+            )}
         </div>
     );
 };

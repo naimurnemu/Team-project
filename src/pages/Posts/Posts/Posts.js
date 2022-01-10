@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+import NavigationHeader from "../../Shared/NavigationHeader/NavigationHeader";
 
 const Posts = () => {
-
-    useEffect(()=>{
+    useEffect(() => {
         fetch("http://localhost:5000/myPost")
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-        })
-    },[])
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            });
+    }, []);
     return (
         <div>
-            <h2>posts</h2>
+            <NavigationHeader />
         </div>
     );
 };

@@ -8,23 +8,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: -20%;
-    
 }
-.blurbg{
+.blurbg {
     background-color: rgba(56, 89, 73, 0.789);
 }
 .banner-title {
     color: rgb(255, 255, 255);
     filter: contrast(1) brightness(1.5);
-     
 }
 
 .img-box {
     opacity: 0.95;
-    border-radius: 20px;
-    margin-right: -45%;
+    /* border-radius: 20px; */
+    padding-right: -45%;
+    margin-right: -40%;
 }
 .img-box img {
     border-radius: 15px;
-    padding: 3rem;
+    /* padding: 3rem; */
 }
