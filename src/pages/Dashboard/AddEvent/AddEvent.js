@@ -28,6 +28,7 @@ const AddEvent = () => {
 
                 if (data.acknowledged) {
                     reset();
+                    alert("Event Post Successfully!!")
                 }
             });
     };

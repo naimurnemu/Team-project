@@ -23,6 +23,7 @@ const AddTeacher = () => {
                 console.log(data);
                 if (data.acknowledged) {
                     reset();
+                    alert("New Teacher Added Successfully!!")
                 }
             });
     };
