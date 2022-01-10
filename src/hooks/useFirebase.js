@@ -22,7 +22,7 @@ const useFirebase = () => {
 
     // sign in with google
     const googleProvider = new GoogleAuthProvider();
-    const googleSignIn = () => {
+    const googleSignIn = (navigate, location) => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
@@ -46,6 +46,35 @@ const useFirebase = () => {
         });
         return () => unSubscribed;
     }, []);
+
+    // store User
+    const updateUser = (email, name, photoURL) => {
+        const user = { email, name, photoURL };
+        if (!isLoading) {
+            fetch("https://mighty-reaches-58570.herokuapp.com/users", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                });
+        }
+    };
+
+    // make Admin
+    useEffect(() => {
+        fetch(
+            `https://mighty-reaches-58570.herokuapp.com/users/${user?.email}`
+        )
+            .then((res) => res.json())
+            .then((data) => {
+                setIsAdmin(data.admin);
+            });
+    }, [user]);
 
     // logout handle
     const logOut = () => {
