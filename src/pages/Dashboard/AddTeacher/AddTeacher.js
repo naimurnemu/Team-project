@@ -25,6 +25,7 @@ const AddTeacher = () => {
                 if (data.acknowledged) {
                     setAlert(true);
                     reset();
+                    alert("New Teacher Added Successfully!!")
                 }
             });
     };

@@ -15,6 +15,7 @@ const ManageEvents = () => {
             });
     }, [fresh]);
 
+<<<<<<< HEAD
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/deleteEvent/${id}`, {
             method: "DELETE",
@@ -27,6 +28,36 @@ const ManageEvents = () => {
                 setFresh(data);
             });
     };
+=======
+        useEffect(()=>{
+            fetch('http://localhost:5000/getEvent')
+        .then(res=>res.json())
+        .then(data=>{
+           
+            setEvents(data)
+        })
+    },[fresh])
+
+    const handleDelete = (id)=>{
+        const proceed = window.confirm("Are you sure? delete for this Event")
+        if(proceed){
+            fetch(`http://localhost:5000/deleteEvent/${id}`, {
+            method: "DELETE",
+            headers: {
+                "content-type": 'application/json'
+            }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            setFresh(data)
+            
+        })
+
+        }
+        
+
+    }
+>>>>>>> 9f12b45f5ce6ebac037127f6755d902bb675529f
     return (
         <div className="event-bg">
             {/* <div className="mx-auto w-100 w-md-50">
