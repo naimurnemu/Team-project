@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 const Event = ({ event }) => {
-    const { date, description, image, location, title } = event;
+    const { date, description, image, location, title } = event || {};
     return (
         <div>
             <Card className="my-3">
@@ -13,10 +13,10 @@ const Event = ({ event }) => {
                 </Card.Body>
                 <div className="d-flex justify-content-evenly">
                     <p>
-                        <i class="fas fa-clock" /> &nbsp; {date}
+                        <i className="fas fa-clock" /> &nbsp; {date}
                     </p>
                     <p>
-                        <i class="fas fa-map-marker-alt" /> &nbsp; {location}
+                        <i className="fas fa-map-marker-alt" /> &nbsp; {location}
                     </p>
                 </div>
             </Card>
