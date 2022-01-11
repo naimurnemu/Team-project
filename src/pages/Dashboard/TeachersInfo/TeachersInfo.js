@@ -17,17 +17,21 @@ const TeachersInfo = () => {
 
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteTeacher/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-
-                setFresh(data)
+        const proceed = window.confirm("Are you sure? delete for this Event")
+        if(proceed){
+            fetch(`http://localhost:5000/deleteTeacher/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
+                }
             })
+                .then(res => res.json())
+                .then(data => {
+    
+                    setFresh(data)
+                })
+        }
+       
     }
 
     if (!teachers.length) {
