@@ -29,6 +29,9 @@ const useFirebase = () => {
                 setUser(result.user);
                 setIsAdmin(true);
                 setError("");
+                updateUser(user.email, user.displayName, user.photoURL);
+                const destination = location.state?.from || "/";
+                navigate(destination);
             })
             .catch((issue) => setError(issue.message))
             .finally(() => setIsLoading(false));
@@ -51,7 +54,7 @@ const useFirebase = () => {
     const updateUser = (email, name, photoURL) => {
         const user = { email, name, photoURL };
         if (!isLoading) {
-            fetch("https://mighty-reaches-58570.herokuapp.com/users", {
+            fetch("http://localhost:5000/users", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -65,11 +68,9 @@ const useFirebase = () => {
         }
     };
 
-    // make Admin
+    // verify admin
     useEffect(() => {
-        fetch(
-            `https://mighty-reaches-58570.herokuapp.com/users/${user?.email}`
-        )
+        fetch(`http://localhost:5000/users/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setIsAdmin(data.admin);
