@@ -13,24 +13,6 @@ const TeachersInfo = () => {
     }, [fresh]);
 
     const handleDelete = (id) => {
-<<<<<<< HEAD
-        const proceed = window.confirm("Are you sure? delete for this Event")
-        if(proceed){
-            fetch(`http://localhost:5000/deleteTeacher/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'content-type': 'application/json'
-                }
-            })
-                .then(res => res.json())
-                .then(data => {
-    
-                    setFresh(data)
-                })
-        }
-       
-    }
-=======
         fetch(`http://localhost:5000/deleteTeacher/${id}`, {
             method: "DELETE",
             headers: {
@@ -42,7 +24,6 @@ const TeachersInfo = () => {
                 setFresh(data);
             });
     };
->>>>>>> 93d988788913f291221e29c756306bf22f4dc05c
 
     if (!teachers.length) {
         return (

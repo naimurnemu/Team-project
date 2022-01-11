@@ -6,7 +6,7 @@ const Event = ({ event }) => {
     return (
         <div>
             <Card className="my-3">
-                <Card.Img alt={title} variant="top" src={image} />
+                <Card.Img alt={title} variant="top"  src={`data:image/*;base64,${image}`} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{description}</Card.Text>

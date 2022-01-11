@@ -126,7 +126,7 @@ const Dashboard = () => {
                                 className="d-block mb-3 w-75"
                                 variant="secondary"
                             >
-                                <i className="fas fa-home" />
+                                <i className="fas fa-home" /> 
                                 Home
                             </Button>
                         </Link>
