@@ -68,14 +68,14 @@ const useFirebase = () => {
         }
     };
 
-    // // make Admin
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/users/${user?.email}`)
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             setIsAdmin(data.admin);
-    //         });
-    // }, [user]);
+    // verify admin
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user?.email}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setIsAdmin(data.admin);
+            });
+    }, [user]);
 
     // logout handle
     const logOut = () => {
