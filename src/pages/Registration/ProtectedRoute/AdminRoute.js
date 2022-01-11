@@ -18,7 +18,7 @@ const AdminRoute = ({ children }) => {
     } else if (user.email) {
         return children;
     } else {
-        return <Navigate to="/addUser" state={{ from: location }} />;
+        return <Navigate to="/login" state={{ from: location }} />;
     }
 };
 
