@@ -1,22 +1,24 @@
 # Wisdom School is a team Project. 
 # Getting with React
 
+Live site: https://wisdom-high-school.netlify.app/
+
 ## Website Features
 
 1. This is a High School website Which help to student their studies
 2. There are 4 main routes.
 3. Home route have 6+ component route to build website attractive.
-4. Blogs route like social media. This route serve blogs to help learning.
-5. User can view full blog by dynamic route.
-6. another attractive route is Chat with student.
-   this is a chat group for student o making a good a good understating and with others.
+4. Blogs route like Professional site. This route serve blogs to help learning.
+5. User can view full Magazine by dynamic route.
+6. another attractive route is event of school.
+   this is a  for student o making a good a good understating and with others.
 7. the main route is Profiles. this route control al dynamic system of website.  
-   from their user can post a blog by new blog route.
+   from their user can post a blog by new Magazine route.
    user can view his/her posted blogs.
-   admin can control make admin and can manage blog and chats.
+   admin can control make admin and can manage magazine and events.
 8. with out home route all are private and admin route.
    only user and admin can explore those.
-9. their i user google and github login system for more accessability.
+9. their i user google and email login system for more accessability.
 
 ## Frond-End Technologies:
 
