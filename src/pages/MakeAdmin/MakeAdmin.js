@@ -8,8 +8,8 @@ const MakeAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
     const { isLoading } = useAuth();
     const onSubmit = (data) => {
-        console.log(data)
-        fetch("http://localhost:5000/users/makeAdmin", {
+       
+        fetch("https://floating-cliffs-11080.herokuapp.com/users/makeAdmin", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

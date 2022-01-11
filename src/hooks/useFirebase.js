@@ -54,7 +54,7 @@ const useFirebase = () => {
     const updateUser = (email, name, photoURL) => {
         const user = { email, name, photoURL };
         if (!isLoading) {
-            fetch("http://localhost:5000/users", {
+            fetch("https://floating-cliffs-11080.herokuapp.com/users", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -63,14 +63,14 @@ const useFirebase = () => {
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data);
+                  
                 });
         }
     };
 
     // verify admin
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://floating-cliffs-11080.herokuapp.com/users/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setIsAdmin(data.admin);

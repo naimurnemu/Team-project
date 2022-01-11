@@ -12,7 +12,7 @@ const AddEvent = () => {
         formData.append("date", data.date);
         formData.append("image", data.image[0]);
 
-        const url = "http://localhost:5000/addEvent";
+        const url = "https://floating-cliffs-11080.herokuapp.com/addEvent";
         fetch(url, {
             method: "POST",
             body: formData,

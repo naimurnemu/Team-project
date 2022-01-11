@@ -6,14 +6,14 @@ const Events = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/getEvent")
+        fetch("https://floating-cliffs-11080.herokuapp.com/getEvent")
             .then((res) => res.json())
             .then((data) => {
                 setEvents(data);
             });
     }, []);
 
-    console.log(events);
+   
     return (
         <div>
             <NavigationHeader />

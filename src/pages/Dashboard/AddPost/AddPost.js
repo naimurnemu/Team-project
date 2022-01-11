@@ -14,14 +14,14 @@ const AddPost = () => {
         formData.append("date", new Date().toLocaleString());
         formData.append("image", data.image[0]);
 
-        const url = "http://localhost:5000/newPost";
+        const url = "https://floating-cliffs-11080.herokuapp.com/newPost";
         fetch(url, {
             method: "POST",
             body: formData,
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+               
 
                 if (data.acknowledged) {
                     setAlert(true);

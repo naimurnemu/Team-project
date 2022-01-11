@@ -6,10 +6,10 @@ import Teacher from "../Teacher/Teacher";
 const Teachers = () => {
     const [fresh, setFresh] = useState(false);
     const [teachers, setTeachers] = useState([]);
-    console.log(teachers);
+ 
 
     useEffect(() => {
-        fetch("http://localhost:5000/teachers")
+        fetch("https://floating-cliffs-11080.herokuapp.com/teachers")
             .then((res) => res.json())
             .then((data) => {
                 setTeachers(data);

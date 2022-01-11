@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 const Post = ({ post: postdata }) => {
     const { image, date, post, title, user } = postdata || {};
-    console.log(image)
+   
     return (
         <div className="m-3">
             <Card>

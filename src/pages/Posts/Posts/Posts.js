@@ -5,7 +5,7 @@ import Post from "../Post/Post";
 const Posts = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/myPost")
+        fetch("https://floating-cliffs-11080.herokuapp.com/myPost")
             .then((res) => res.json())
             .then((data) => {
                 setPosts(data);
