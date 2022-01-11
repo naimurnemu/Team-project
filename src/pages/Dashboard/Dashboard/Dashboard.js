@@ -9,7 +9,7 @@ import useAuth from "../../../hooks/useAuth";
 const Dashboard = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
-    const { user, logOut } = useAuth();
+    const { user, logOut, admin } = useAuth();
 
     return (
         <div>
@@ -49,7 +49,9 @@ const Dashboard = () => {
 
                     <div className="my-3 mx-auto ">
                         <div>
-                            <p>
+                            {
+                                admin && (<>
+                                <p>
                                 <Link
                                     to={`/dashboard/addTeacher`}
                                     className="text-decoration-none mb-3 text-white  fw-bold"
@@ -57,9 +59,7 @@ const Dashboard = () => {
                                     <i className="fas fa-plus-circle" /> &nbsp;
                                     Add Teachers
                                 </Link>
-                            </p>
-
-                            <p>
+                            </p><p>
                                 <Link
                                     to={`/dashboard/manageTeacher`}
                                     className="text-decoration-none mb-3 text-white fw-bold"
@@ -68,7 +68,6 @@ const Dashboard = () => {
                                     &nbsp; Manage Teacher
                                 </Link>
                             </p>
-
                             <p>
                                 <Link
                                     to={`/dashboard/addEvent`}
@@ -78,7 +77,6 @@ const Dashboard = () => {
                                     &nbsp; Add Event
                                 </Link>
                             </p>
-
                             <p>
                                 <Link
                                     to={`/dashboard/manageEvent`}
@@ -98,6 +96,18 @@ const Dashboard = () => {
                                 </Link>
                             </p>
 
+
+
+
+                                </>)
+                            }
+                            
+
+                            
+
+                            
+                            
+                            
                             <p>
                                 <Link
                                     to={`/dashboard`}
