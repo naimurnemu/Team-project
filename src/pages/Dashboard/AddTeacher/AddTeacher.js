@@ -14,14 +14,14 @@ const AddTeacher = () => {
         formData.append("link", data.link);
         formData.append("image", data.image[0]);
 
-        const url = "http://localhost:5000/teachers";
+        const url = "https://floating-cliffs-11080.herokuapp.com/teachers";
         fetch(url, {
             method: "POST",
             body: formData,
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+               
                 if (data.acknowledged) {
                     setAlert(true);
                     reset();

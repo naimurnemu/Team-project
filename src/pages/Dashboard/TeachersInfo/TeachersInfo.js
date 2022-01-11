@@ -5,7 +5,7 @@ const TeachersInfo = () => {
     const [fresh, setFresh] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/teachers")
+        fetch("https://floating-cliffs-11080.herokuapp.com/teachers")
             .then((res) => res.json())
             .then((data) => {
                 setTeachers(data);
@@ -13,7 +13,7 @@ const TeachersInfo = () => {
     }, [fresh]);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteTeacher/${id}`, {
+        fetch(`https://floating-cliffs-11080.herokuapp.com/deleteTeacher/${id}`, {
             method: "DELETE",
             headers: {
                 "content-type": "application/json",

@@ -8,7 +8,7 @@ const ManageEvents = () => {
     const [fresh, setFresh] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/getEvent")
+        fetch("https://floating-cliffs-11080.herokuapp.com/getEvent")
             .then((res) => res.json())
             .then((data) => {
                 setEvents(data);
@@ -16,7 +16,7 @@ const ManageEvents = () => {
     }, [fresh]);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteEvent/${id}`, {
+        fetch(`https://floating-cliffs-11080.herokuapp.com/deleteEvent/${id}`, {
             method: "DELETE",
             headers: {
                 "content-type": "application/json",
