@@ -5,8 +5,8 @@ import useAuth from "../../../hooks/useAuth";
 
 const AdminRoute = ({ children }) => {
     let location = useLocation();
-    const { user, isLoading } = useAuth();
-    if (isLoading) {
+    const { user, isLoading, admin } = useAuth();
+    if (isLoading && admin) {
         return (
             <div>
                 <br />
@@ -15,10 +15,10 @@ const AdminRoute = ({ children }) => {
                 <Spinner animation="grow" />
             </div>
         );
-    } else if (user.email) {
+    } else if (user.email && admin) {
         return children;
     } else {
-        return <Navigate to="/login" state={{ from: location }} />;
+        return <Navigate to="/" state={{ from: location }} />;
     }
 };
 
