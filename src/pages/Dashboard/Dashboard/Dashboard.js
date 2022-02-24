@@ -49,65 +49,56 @@ const Dashboard = () => {
 
                     <div className="my-3 mx-auto ">
                         <div>
-                            {
-                                admin && (<>
-                                <p>
-                                <Link
-                                    to={`/dashboard/addTeacher`}
-                                    className="text-decoration-none mb-3 text-white  fw-bold"
-                                >
-                                    <i className="fas fa-plus-circle" /> &nbsp;
-                                    Add Teachers
-                                </Link>
-                            </p><p>
-                                <Link
-                                    to={`/dashboard/manageTeacher`}
-                                    className="text-decoration-none mb-3 text-white fw-bold"
-                                >
-                                    <i className="fas fa-tasks" />
-                                    &nbsp; Manage Teacher
-                                </Link>
-                            </p>
-                            <p>
-                                <Link
-                                    to={`/dashboard/addEvent`}
-                                    className="text-decoration-none mb-3 text-white fw-bold"
-                                >
-                                    <i className="fas fa-plus-circle" />
-                                    &nbsp; Add Event
-                                </Link>
-                            </p>
-                            <p>
-                                <Link
-                                    to={`/dashboard/manageEvent`}
-                                    className="text-decoration-none mb-3 text-white fw-bold"
-                                >
-                                    <i className="fas fa-tasks" />
-                                    &nbsp; Manage Event
-                                </Link>
-                            </p>
-                            <p>
-                                <Link
-                                    to={`/dashboard/makeAdmin`}
-                                    className="text-decoration-none mb-3 text-white fw-bold"
-                                >
-                                    <i className="fas fa-plus-circle" />
-                                    &nbsp; Add New Admin
-                                </Link>
-                            </p>
+                            {admin && (
+                                <>
+                                    <p>
+                                        <Link
+                                            to={`/dashboard/addTeacher`}
+                                            className="text-decoration-none mb-3 text-white  fw-bold"
+                                        >
+                                            <i className="fas fa-plus-circle" />{" "}
+                                            &nbsp; Add Teachers
+                                        </Link>
+                                    </p>
+                                    <p>
+                                        <Link
+                                            to={`/dashboard/manageTeacher`}
+                                            className="text-decoration-none mb-3 text-white fw-bold"
+                                        >
+                                            <i className="fas fa-tasks" />
+                                            &nbsp; Manage Teacher
+                                        </Link>
+                                    </p>
+                                    <p>
+                                        <Link
+                                            to={`/dashboard/addEvent`}
+                                            className="text-decoration-none mb-3 text-white fw-bold"
+                                        >
+                                            <i className="fas fa-plus-circle" />
+                                            &nbsp; Add Event
+                                        </Link>
+                                    </p>
+                                    <p>
+                                        <Link
+                                            to={`/dashboard/manageEvent`}
+                                            className="text-decoration-none mb-3 text-white fw-bold"
+                                        >
+                                            <i className="fas fa-tasks" />
+                                            &nbsp; Manage Event
+                                        </Link>
+                                    </p>
+                                    <p>
+                                        <Link
+                                            to={`/dashboard/makeAdmin`}
+                                            className="text-decoration-none mb-3 text-white fw-bold"
+                                        >
+                                            <i className="fas fa-plus-circle" />
+                                            &nbsp; Add New Admin
+                                        </Link>
+                                    </p>
+                                </>
+                            )}
 
-
-
-
-                                </>)
-                            }
-                            
-
-                            
-
-                            
-                            
-                            
                             <p>
                                 <Link
                                     to={`/dashboard`}
@@ -136,7 +127,7 @@ const Dashboard = () => {
                                 className="d-block mb-3 w-75"
                                 variant="secondary"
                             >
-                                <i className="fas fa-home" /> 
+                                <i className="fas fa-home" />
                                 Home
                             </Button>
                         </Link>
